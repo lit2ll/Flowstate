@@ -22,9 +22,8 @@ export default function HeroVideo() {
 
 			{/* Content */}
 			<div className='relative z-10 mx-auto max-w-5xl px-6 py-24 text-center  w-full'>
-				<p className='mt-6 text-lg md:text-xl text-white/85'>
-					<Badge text='New: Flow State Training Program' />
-				</p>
+				<Badge text='New: Flow State Training Program' />
+
 				<TextEffect
 					preset='fade-in-blur'
 					speedSegment={0.3}
