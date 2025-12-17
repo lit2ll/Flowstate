@@ -1,18 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
-import { ArrowRight, ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
-import { TextEffect } from '@/components/ui/text-effect'
-import { AnimatedGroup } from '@/components/ui/animated-group'
-import { HeroHeader } from '../header'
-import type { Variants } from 'motion/react'
-import VideoBlock from './hero-video'
-import { Logo } from '../../logo'
 import { CustomersSection } from '../customers'
 import HeroVideo from './hero-video'
-import { Badge } from '../../badge'
-import { transitionVariants } from '@/lib/utils'
 import HeroBlock from './hero-block'
 
 export default function HeroSection() {
@@ -26,7 +14,7 @@ export default function HeroSection() {
 				</div>
 				<HeroVideo />
 				<HeroBlock />
-				<CustomersSection />
+				{/* <CustomersSection /> */}
 			</main>
 		</>
 	)

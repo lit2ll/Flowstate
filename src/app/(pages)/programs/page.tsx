@@ -38,7 +38,7 @@ const ProgramsPage = () => {
 			title: 'Private Training',
 			tagline: 'Personalized 1-on-1 Coaching',
 			description:
-				'Direct access to expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',
+				'Expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',
 			features: [
 				'Customized curriculum based on your objectives',
 				'Flexible scheduling to fit your lifestyle',
@@ -46,9 +46,42 @@ const ProgramsPage = () => {
 				'Video analysis and homework assignments',
 				'Progress tracking and goal setting'
 			],
-			pricing: 'From $120/session',
+			pricing: 'From $100/session',
 			commitment: 'No contract required'
 		},
+		{
+			icon: <User className='w-12 h-12' />,
+			title: 'Private Training - 5 Sessions',
+			tagline: 'Personalized 1-on-1 Coaching',
+			description:
+				'Expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',
+			features: [
+				'Customized curriculum based on your objectives',
+				'Flexible scheduling to fit your lifestyle',
+				'Real-time feedback and technique refinement',
+				'Video analysis and homework assignments',
+				'Progress tracking and goal setting'
+			],
+			pricing: '$475 ($95/session)',
+			commitment: 'No contract required'
+		},
+		{
+			icon: <User className='w-12 h-12' />,
+			title: 'Private Lesson',
+			tagline: 'Personalized 1-on-1 Coaching',
+			description:
+				'Expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',
+			features: [
+				'Customized curriculum based on your objectives',
+				'Flexible scheduling to fit your lifestyle',
+				'Real-time feedback and technique refinement',
+				'Video analysis and homework assignments',
+				'Progress tracking and goal setting'
+			],
+			pricing: '$900 ($90/session)',
+			commitment: 'No contract required'
+		},
+
 		{
 			icon: <Users className='w-12 h-12' />,
 			title: 'Small Group Training',

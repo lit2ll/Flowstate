@@ -11,7 +11,7 @@ import Image from 'next/image'
 const menuItems = [
 	{ name: 'Training Methods', href: '/training' },
 	{ name: 'Programs', href: '/programs' },
-	{ name: 'About/Coach', href: '/about' },
+	{ name: 'About', href: '/about' },
 	{ name: 'Schedule & Booking', href: '/schedule' },
 	// { name: 'Dashboard', href: '/dashboard' },
 	{ name: 'Contact', href: '/contact' }
@@ -55,12 +55,12 @@ export const HeroHeader = () => {
 						</div>
 
 						<div className='absolute  inset-0 m-auto hidden size-fit lg:block'>
-							<ul className='flex gap-8 text-sm'>
+							<ul className='flex gap-6 text-sm'>
 								{menuItems.map((item, index) => (
 									<li key={index}>
 										<Link
 											href={item.href}
-											className='text-muted-foreground hover:text-accent-foreground block duration-150'
+											className='text-gray-300 tracking-tight font-semibold hover:text-accent-foreground block duration-150'
 										>
 											<span>{item.name}</span>
 										</Link>
@@ -84,27 +84,27 @@ export const HeroHeader = () => {
 									))}
 								</ul>
 							</div>
-							<div className='flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit'>
+							<div className='flex w-full flex-col space-y-3 sm:flex-row  sm:space-y-0 md:w-fit'>
 								<ModeToggle />
 								<Button
 									asChild
 									variant='outline'
 									size='sm'
-									className={cn(isScrolled && 'lg:hidden bg-[#bb0a21]')}
+									className={cn(isScrolled && 'lg:hidden bg-emerald-600')}
 								>
 									<Link href='/signin'>
 										<span>Login</span>
 									</Link>
 								</Button>
-								<Button asChild size='sm' className={cn(isScrolled && 'lg:hidden')}>
-									<Link href='signup'>
+								<Button asChild size='sm' className={cn(isScrolled && 'lg:hidden ')}>
+									<Link href='signup' className='bg-emerald-500!'>
 										<span>Sign Up</span>
 									</Link>
 								</Button>
 								<Button
 									asChild
 									size='sm'
-									className={cn(isScrolled ? 'lg:inline-flex bg-emerald-700' : 'hidden')}
+									className={cn(isScrolled ? 'lg:inline-flex bg-emerald-600' : 'hidden')}
 								>
 									<Link href='#'>
 										<span>Get Started</span>

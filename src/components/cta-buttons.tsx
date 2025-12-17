@@ -45,13 +45,23 @@ export const CTAButtons = () => {
 						key={1}
 						className='bg-[#280003]/10 rounded-[calc(var(--radius-xl)+0.125rem)] border-white p-0.5'
 					>
-						<Button asChild size='lg' className='bg-emerald-600 rounded-xl px-5 text-black'>
+						<Button
+							asChild
+							size='lg'
+							className='bg-emerald-500 rounded-xl px-5 text-black hover:bg-emerald-600 focus:ring-0'
+						>
 							<Link href='#link'>
 								<span className='text-nowrap'>Book Your First Session</span>
 							</Link>
 						</Button>
 					</div>
-					<Button key={2} asChild size='lg' variant='ghost' className='h-10.5 rounded-xl px-5'>
+					<Button
+						key={2}
+						asChild
+						size='lg'
+						variant='link'
+						className='h-10.5 rounded-xl px-5 text-emerald-300 text-md hover:bg-black/5 focus:ring-0'
+					>
 						<Link href='#link'>
 							<span className='text-nowrap'>Explore the Method</span>
 						</Link>
