@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'motion/react'
 import type { TargetAndTransition, Transition, Variant, Variants } from 'motion/react'
-import React from 'react'
+import React, { Children, isValidElement } from 'react'
 
 export type PresetType = 'blur' | 'fade-in-blur' | 'scale' | 'fade' | 'slide'
 
@@ -140,6 +140,38 @@ const AnimationComponent: React.FC<{
 })
 
 AnimationComponent.displayName = 'AnimationComponent'
+
+type TextToken = string | React.ReactElement
+
+const tokenizeChildren = (children: React.ReactNode, per: PerType): TextToken[] => {
+	const tokens: TextToken[] = []
+
+	const pushString = (value: string) => {
+		// Split string into tokens exactly like your existing splitText would
+		const parts = tokenizeChildren(children, per)
+		for (const p of parts) tokens.push(p)
+	}
+
+	Children.forEach(children, (child) => {
+		if (child == null || child === false) return
+
+		if (typeof child === 'string' || typeof child === 'number') {
+			pushString(String(child))
+			return
+		}
+
+		// If it's a React element (like <span>Flow</span>), keep it as one token
+		if (isValidElement(child)) {
+			tokens.push(child)
+			return
+		}
+
+		// Fallback: coerce anything else to string
+		pushString(String(child))
+	})
+
+	return tokens
+}
 
 const splitText = (text: string, per: PerType) => {
 	if (per === 'line') return text.split('\n')

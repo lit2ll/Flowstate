@@ -16,15 +16,6 @@ const geistMono = Geist_Mono({
 	variable: '--font-geist-mono',
 	display: 'swap'
 })
-const BlackStarlord = localFont({
-	src: '../../public/BlackStarlordPersonalUse-j97w0.ttf',
-	variable: '--font-black-starlord'
-})
-
-const SensaSans = localFont({
-	src: '../../public/SensaSans-Regular.ttf',
-	variable: '--font-sensa-sans'
-})
 
 export const metadata: Metadata = {
 	title: {
@@ -49,14 +40,9 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable}  text-foreground antialiased min-h-screen font-geist`}
+				className={`${geistSans.variable} ${geistMono.variable} text-foreground antialiased min-h-screen font-geist`}
 			>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-					disableTransitionOnChange
-				>
+				<ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
 					<Toaster />
 					{children}
 				</ThemeProvider>

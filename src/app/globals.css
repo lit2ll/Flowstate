@@ -72,7 +72,12 @@
 	/* Font families */
 	--font-geist: var(--font-geist);
 	--font-geist-mono: var(--font-geist-mono);
-
+	--font-display: 'Bank Gothic', 'BankGothic Md BT', 'Square 721', 'Eurostile', 'Microgramma',
+		'DIN Condensed', 'Agency FB', 'Bebas Neue', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+		Roboto, Arial, sans-serif;
+	/* Body */
+	--font-body: var(--font-geist), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+		sans-serif;
 	/* Font weights */
 	--font-weight-regular: 400;
 	--font-weight-medium: 500;
@@ -94,23 +99,23 @@
 	--card-foreground: oklch(0.3772 0.0619 212.664);
 	--popover: oklch(0.9724 0.0053 197.0692);
 	--popover-foreground: oklch(0.3772 0.0619 212.664);
-	--primary: oklch(0.5624 0.0947 203.2755);
-	--primary-foreground: oklch(1 0 0);
+	--primary: oklch(0.78 0.16 160); /* emerald green */
+	--primary-foreground: #07120e;
 	--secondary: oklch(0.9244 0.0181 196.845);
 	--secondary-foreground: oklch(0.3772 0.0619 212.664);
 	--muted: oklch(0.9295 0.0107 196.9723);
 	--muted-foreground: oklch(0.5428 0.0594 201.5662);
-	--accent: oklch(0.9021 0.0297 201.8915);
-	--accent-foreground: oklch(0.3772 0.0619 212.664);
+	--accent: rgba(80, 220, 170, 0.14); /* soft emerald wash */
+	--accent-foreground: #f4f7fb;
 	--destructive: oklch(0.5732 0.1901 25.5409);
 	--border: oklch(0.8931 0.0205 204.4136);
 	--input: oklch(0.9244 0.0181 196.845);
-	--ring: oklch(0.5624 0.0947 203.2755);
-	--chart-1: oklch(0.5624 0.0947 203.2755);
-	--chart-2: oklch(0.6389 0.1029 201.5918);
-	--chart-3: oklch(0.7124 0.1075 201.2486);
-	--chart-4: oklch(0.7701 0.0979 201.1816);
-	--chart-5: oklch(0.8336 0.0771 200.9702);
+	--ring: oklch(0.78 0.16 160);
+	--chart-1: oklch(0.78 0.16 160);
+	--chart-2: oklch(0.7 0.14 160);
+	--chart-3: oklch(0.62 0.12 160);
+	--chart-4: oklch(0.54 0.1 160);
+	--chart-5: oklch(0.46 0.08 160);
 	--sidebar: oklch(0.928 0.0183 205.3151);
 	--sidebar-foreground: oklch(0.3772 0.0619 212.664);
 	--sidebar-primary: oklch(0.5624 0.0947 203.2755);
@@ -140,32 +145,56 @@
 }
 
 .dark {
+	/* Fonts (keep Geist as default; add a display/heading fallback) */
 	--font-geist: var(--font-geist);
 	--font-geist-mono: var(--font-geist-mono);
+	--font-display: 'Bank Gothic', 'Geist', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+		Arial, sans-serif;
+
 	--background: #393e41;
-	--foreground: #00000;
-	--card: oklch(0.2293 0.0276 216.0674);
-	--card-foreground: oklch(0.852 0.1269 195.0354);
-	--popover: oklch(0.2293 0.0276 216.0674);
-	--popover-foreground: oklch(0.852 0.1269 195.0354);
-	--primary: oklch(0.852 0.1269 195.0354);
-	--primary-foreground: #171717;
-	--secondary: oklch(0.3775 0.0564 216.501);
-	--secondary-foreground: oklch(0.852 0.1269 195.0354);
-	--muted: oklch(0.2894 0.0412 218.8153);
-	--muted-foreground: oklch(0.6611 0.0975 195.0526);
-	--accent: oklch(0.3775 0.0564 216.501);
-	--accent-foreground: #55555;
-	--destructive: oklch(0.6168 0.2086 25.8088);
-	--border: oklch(0.3775 0.0564 216.501);
-	--input: oklch(0.3775 0.0564 216.501);
-	--ring: oklch(0.852 0.1269 195.0354);
-	--chart-1: oklch(0.852 0.1269 195.0354);
-	--chart-2: oklch(0.6611 0.0975 195.0526);
-	--chart-3: oklch(0.5804 0.0849 195.0673);
-	--chart-4: oklch(0.4269 0.063 202.6247);
-	--chart-5: oklch(0.3142 0.0455 204.1575);
-	--sidebar: oklch(0.2068 0.0247 224.4533);
+	--foreground: #f4f7fb; /* off-white */
+
+	--card: #0f1620; /* raised surface */
+	--card-foreground: #eef3f9;
+
+	--popover: #0f1620;
+	--popover-foreground: #eef3f9;
+
+	/* Accent system (emerald/steel vibe) */
+	--primary: oklch(0.84 0.13 195); /* teal/steel-cyan accent */
+	--primary-foreground: #071016;
+	--secondary: #111c28; /* secondary surface */
+	--secondary-foreground: #e8eef6;
+	--muted: #0e151f;
+	--muted-foreground: rgba(244, 247, 251, 0.68);
+	--accent: rgba(132, 242, 226, 0.12); /* soft accent fill */
+	--accent-foreground: #f4f7fb; /* FIX: valid color */
+	--destructive: oklch(0.62 0.22 25.8);
+	--destructive-foreground: #ffffff;
+
+	/* Borders & focus */
+	--border: rgba(244, 247, 251, 0.12);
+	--input: rgba(244, 247, 251, 0.1);
+	--ring: oklch(0.84 0.13 195);
+
+	/* Optional chart harmony */
+	--chart-1: oklch(0.84 0.13 195);
+	--chart-2: oklch(0.74 0.1 195);
+	--chart-3: oklch(0.66 0.08 195);
+	--chart-4: oklch(0.58 0.06 200);
+	--chart-5: oklch(0.5 0.05 205);
+
+	/* Radius: slightly more premium than 0.125rem */
+	--radius: 0.75rem;
+
+	/* Shadows: subtle, cool */
+	--shadow-color: hsl(190 80% 55% / 0.14);
+	--shadow-opacity: 0.18;
+	--shadow-blur: 14px;
+	--shadow-spread: 0px;
+	--shadow-offset-x: 0px;
+	--shadow-offset-y: 10px;
+
 	--sidebar-foreground: oklch(0.852 0.1269 195.0354);
 	--sidebar-primary: oklch(0.852 0.1269 195.0354);
 	--sidebar-primary-foreground: oklch(0.2068 0.0247 224.4533);
@@ -175,12 +204,7 @@
 	--sidebar-ring: oklch(0.852 0.1269 195.0354);
 	--destructive-foreground: oklch(0.9612 0 0);
 	--radius: 0.125rem;
-	--shadow-color: hsl(180 70% 60% / 0.2);
-	--shadow-opacity: 0.2;
-	--shadow-blur: 2px;
-	--shadow-spread: 0px;
-	--shadow-offset-x: 1px;
-	--shadow-offset-y: 1px;
+
 	--letter-spacing: 0em;
 	--spacing: 0.25rem;
 	--shadow-2xs: 1px 1px 2px 0px hsl(180 70% 60% / 0.1);
@@ -194,6 +218,40 @@
 }
 
 @layer base {
+	body {
+		font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+			sans-serif;
+		background: var(--background);
+		color: var(--foreground);
+	}
+
+	/* Headings = condensed/technical vibe */
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-display);
+		letter-spacing: -0.02em;
+	}
+
+	/* Small caps utility feel for nav/eyebrows (optional) */
+	.fs-eyebrow {
+		font-family: var(--font-display);
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	/* Premium links/buttons hover */
+	a:hover {
+		opacity: 0.92;
+	}
+}
+
+button:hover,
+a[role='button']:hover {
+	box-shadow: 0 0 0 1px rgba(80, 220, 170, 0.25), 0 12px 24px rgba(80, 220, 170, 0.12);
+}
+
+/* @layer base {
 	* {
 		@apply border-border outline-ring/50;
 	}
@@ -201,4 +259,44 @@
 		@apply bg-background text-foreground;
 		letter-spacing: var(--tracking-normal);
 	}
+} */
+@layer utilities {
+	/* Subtle emerald atmosphere (premium, not neon) */
+	.fs-hero {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.fs-hero::before {
+		content: '';
+		position: absolute;
+		inset: -40%;
+		background: radial-gradient(closest-side, rgba(80, 220, 170, 0.18), transparent 60%),
+			radial-gradient(closest-side, rgba(80, 220, 170, 0.1), transparent 55%);
+		filter: blur(24px);
+		transform: translate3d(0, 0, 0);
+		pointer-events: none;
+	}
+}
+/* Optional “top sheen” */
+.fs-hero::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to bottom, rgba(80, 220, 170, 0.1), transparent 45%);
+	pointer-events: none;
+}
+
+.theme-kids {
+	--fs-accent: rgba(110, 255, 200, 0.18);
+	--fs-accent-strong: rgb(110 255 200);
+	--fs-cta: rgb(110 255 200);
+	--fs-cta-foreground: #06110d;
+}
+
+.theme-adults {
+	--fs-accent: rgba(80, 220, 170, 0.14);
+	--fs-accent-strong: rgb(80 220 170);
+	--fs-cta: rgb(80 220 170);
+	--fs-cta-foreground: #07120e;
 }
