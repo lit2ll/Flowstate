@@ -58,7 +58,7 @@ const TestimonialsBlock = () => {
 	// ]
 	return (
 		<div className='py-16'>
-			<Section id='testimonials' eyebrow='Testimonials' title='What Students Say'>
+			<Section id='testimonials' eyebrow='Testimonials' title='Students'>
 				<div className='container mx-auto max-w-5xl'>
 					<motion.div
 						initial={{ opacity: 0, y: 30 }}

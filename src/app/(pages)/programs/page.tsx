@@ -51,7 +51,7 @@ const ProgramsPage = () => {
 		},
 		{
 			icon: <User className='w-12 h-12' />,
-			title: 'Private Training - 5 Sessions',
+			title: 'Private Training - 5 Lessons Pack',
 			tagline: 'Personalized 1-on-1 Coaching',
 			description:
 				'Expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',
@@ -67,7 +67,7 @@ const ProgramsPage = () => {
 		},
 		{
 			icon: <User className='w-12 h-12' />,
-			title: 'Private Lesson',
+			title: 'Private Lesson - 10 Lessons Pack',
 			tagline: 'Personalized 1-on-1 Coaching',
 			description:
 				'Expert coaching tailored specifically to your goals, skill level, and learning style. Every session is designed around you.',

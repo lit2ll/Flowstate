@@ -42,13 +42,13 @@ const ContactPage = () => {
 		{
 			icon: <Phone className='w-6 h-6' />,
 			title: 'Phone',
-			content: '(555) 123-4567',
-			link: 'tel:+15551234567'
+			content: '(714) 759-4294',
+			link: 'tel:+17147594294'
 		},
 		{
 			icon: <MapPin className='w-6 h-6' />,
 			title: 'Location',
-			content: '123 Training Way, San Francisco, CA 94103',
+			content: '8780 Warner Ave, suite 7, Fountain Valley, CA 92708',
 			link: 'https://maps.google.com'
 		}
 	]
@@ -173,7 +173,7 @@ const ContactPage = () => {
 										value={formData.phone}
 										onChange={handleChange}
 										className='w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all'
-										placeholder='(555) 123-4567'
+										placeholder='(714) 759-4294'
 									/>
 								</div>
 

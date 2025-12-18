@@ -171,7 +171,7 @@ const AboutPage = () => {
 							<h2 className='text-4xl md:text-5xl font-bold tracking-tight'>The Journey</h2>
 							<div className='space-y-6 text-lg text-white/70 leading-relaxed'>
 								<p>
-									I started training martial arts over 20 years ago, drawn to the physical challenge
+									I started training martial arts over 23 years ago, drawn to the physical challenge
 									and mental discipline it demanded. Like many people, I initially trained at
 									traditional gyms where the focus was on toughness and volume—more rounds, harder
 									sparring, faster pace.
