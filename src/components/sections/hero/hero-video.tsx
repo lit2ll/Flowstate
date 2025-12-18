@@ -4,10 +4,10 @@ import { TextEffect } from '../../ui/text-effect'
 
 export default function HeroVideo() {
 	return (
-		<section className='relative min-h-[90vh] flex flex-col justify-center  h-full '>
+		<section className='relative min-h-[90vh] flex flex-col justify-center h-full '>
 			{/* Video */}
 			<video
-				className='absolute -z-10 inset-0 h-full w-full object-cover hidden md:inline-block'
+				className='absolute -z-10 inset-0 h-full w-full object-cover hidden md:inline-block opacity-40'
 				autoPlay
 				muted
 				loop
@@ -16,7 +16,7 @@ export default function HeroVideo() {
 			>
 				<source src='/video/desktop.mp4' type='video/mp4' />
 			</video>
-			<div className='absolute inset-0 hidden md:bg-black/30' />
+			<div className='absolute inset-0 hidden md:bg-black/50' />
 			<video
 				className='absolute -z-10 inset-0 h-full w-full object-cover md:hidden'
 				autoPlay

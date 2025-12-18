@@ -1,17 +1,21 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ArrowRight, Brain, Clock, Dumbbell, Heart, Zap } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import React from 'react'
+import Card from '../ui/card'
+import Section from '../ui/section'
 import { toast } from '@/lib/toast'
-import WelcomeBlock from '@/components/blocks/welcome'
+import { motion } from 'framer-motion'
 
-const HeroBlock = () => {
+type Testimonial = {
+	quote: string
+	name: string
+	label?: string // Adult Student / Parent / Fighter etc.
+}
+
+const TestimonialsBlock = () => {
 	const testimonials = [
 		{
 			quote:
-				"This isn't just another kickboxing gym. Larry's approach completely changed how I think about training and movement.",
+				"The training here is different than any other gym I've been to. Coach Larry's approach to the fight game completely changed how I think about training and movement.",
 			author: 'Michael R.',
 			role: 'Software Engineer'
 		},
@@ -35,16 +39,26 @@ const HeroBlock = () => {
 				"🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
 		})
 	}
-
+	// const TESTIMONIALS: Testimonial[] = [
+	// 	{
+	// 		quote: 'Training here feels intelligent. I’m learning faster and staying healthier.',
+	// 		name: 'Student',
+	// 		label: 'Adult Student'
+	// 	},
+	// 	{
+	// 		quote: 'Clear structure, real coaching, and zero ego. Exactly what I was looking for.',
+	// 		name: 'Student',
+	// 		label: 'Adult Student'
+	// 	},
+	// 	{
+	// 		quote: 'My confidence and composure improved in daily life — not just in training.',
+	// 		name: 'Student',
+	// 		label: 'Adult Student'
+	// 	}
+	// ]
 	return (
-		<>
-			<section className='py-32 px-6 border-t border-white/5'>
-				<WelcomeBlock />
-			</section>
-
-			<section className='py-32 px-6 border-t border-white/5 bg-white/2'></section>
-
-			<section className='py-32 px-6 border-t border-white/5'>
+		<div className='py-16'>
+			<Section id='testimonials' eyebrow='Testimonials' title='What Students Say'>
 				<div className='container mx-auto max-w-5xl'>
 					<motion.div
 						initial={{ opacity: 0, y: 30 }}
@@ -54,7 +68,7 @@ const HeroBlock = () => {
 						className='space-y-16'
 					>
 						<h2 className='text-4xl md:text-5xl font-bold tracking-tight text-center'>
-							What People Say
+							What Our Students Say
 						</h2>
 						<div className='grid md:grid-cols-3 gap-8'>
 							{testimonials.map((testimonial, index) => (
@@ -76,37 +90,20 @@ const HeroBlock = () => {
 						</div>
 					</motion.div>
 				</div>
-			</section>
-
-			<section className='py-32 px-6 border-t border-white/5'>
-				<div className='container mx-auto max-w-4xl'>
-					<motion.div
-						initial={{ opacity: 0, y: 30 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6 }}
-						className='text-center space-y-8'
-					>
-						<h2 className='text-5xl md:text-6xl font-bold tracking-tight'>
-							Your First Session Is
-							<br />
-							the <span className='text-emerald-500'>First Step</span>
-						</h2>
-						<p className='text-xl text-white/60 max-w-2xl mx-auto'>
-							See if Flow State Striking is right for you. No commitment. No pressure. Just come
-							ready to learn.
-						</p>
-						<Button
-							onClick={handleCTA}
-							className='bg-emerald-500 hover:bg-emerald-600 text-black font-semibold px-8 py-6 text-lg mt-8 transition-all duration-300 hover:scale-105'
-						>
-							Book Your First Session <ArrowRight className='ml-2 w-5 h-5' />
-						</Button>
-					</motion.div>
-				</div>
-			</section>
-		</>
+				{/* <div className='grid gap-4 md:grid-cols-3'>
+				{TESTIMONIALS.map((t, idx) => (
+					<Card key={idx}>
+						<p className='text-white/90 leading-relaxed'>“{t.quote}”</p>
+						<div className='mt-4 text-sm text-white/70'>
+							<span className='font-medium text-white/85'>— {t.name}</span>
+							{t.label ? <span className='ml-2 text-white/50'>• {t.label}</span> : null}
+						</div>
+					</Card>
+				))}
+			</div> */}
+			</Section>
+		</div>
 	)
 }
 
-export default HeroBlock
+export default TestimonialsBlock
