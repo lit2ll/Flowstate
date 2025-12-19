@@ -9,18 +9,18 @@ import CtaBlock from '@/components/blocks/cta'
 import Footer from '@/components/footer'
 
 export default function HomePage() {
-	return (
-		<main className='w-full min-h-screen relative'>
-			<HeroHeader />
-			<HeroVideo />
-			{/* <TrustStrip /> */}
-			<WelcomeBlock />
-			<MethodBlock />
-			<ProgramBlock />
-			<TestimonialsBlock />
-			<CoachBlock />
-			<CtaBlock />
-			<Footer />
-		</main>
-	)
+  return (
+    <main className='w-full min-h-screen relative'>
+      <HeroHeader />
+      <HeroVideo />
+      {/* <TrustStrip /> */}
+      <WelcomeBlock />
+      <MethodBlock />
+      <ProgramBlock />
+      <TestimonialsBlock />
+      <CoachBlock />
+      <CtaBlock />
+      <Footer />
+    </main>
+  )
 }

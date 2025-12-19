@@ -4,13 +4,13 @@ import HeroVideo from './hero-video'
 import HeroBlock from './hero-block'
 
 export default function HeroSection() {
-	return (
-		<>
-			<section className='relative'>
-				<HeroVideo />
-				<HeroBlock />
-				{/* <CustomersSection /> */}
-			</section>
-		</>
-	)
+  return (
+    <>
+      <section className='relative'>
+        <HeroVideo />
+        <HeroBlock />
+        {/* <CustomersSection /> */}
+      </section>
+    </>
+  )
 }
