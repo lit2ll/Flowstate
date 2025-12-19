@@ -62,7 +62,7 @@ export const CTAButtons = () => {
             variant='link'
             className='h-10.5 rounded-xl px-5 text-emerald-300 text-md hover:bg-black/5 focus:ring-0'
           >
-            <Link href='#link'>
+            <Link href='/about'>
               <span className='text-nowrap'>Explore the Method</span>
             </Link>
           </Button>
