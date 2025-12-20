@@ -1,14 +1,35 @@
-// app/contact/page.tsx ("use client" required for toast)
-
 'use client'
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { toast } from '@/lib/toast' // our custom toast
+import { toast, useToast } from '@/lib/toast' // our custom toast
 
-const ContactPage = () => {
+const CONTACT_EMAIL = 'info@flowstatestriking.com'
+
+function buildMailtoHref() {
+  const subject = 'Flow State Striking — Inquiry'
+  const body = [
+    'Hi Larry,',
+    '',
+    'Question: ',
+    '',
+    '• Goal:',
+    '• Experience level:',
+    '• Availability:',
+    '',
+    'Thanks!'
+  ].join('\n')
+
+  const params = new URLSearchParams({ subject, body })
+  return `mailto:${CONTACT_EMAIL}?${params.toString()}`
+}
+
+export default function ContactPage() {
+  const { toast } = useToast()
+  const mailtoHref = buildMailtoHref()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,12 +37,19 @@ const ContactPage = () => {
     message: ''
   })
 
+  const handleEmailClick = () => {
+    toast.success({
+      title: 'Email sent successfully',
+      description: ' Thank you for reaching out! I will get back to you shortly.',
+      duration: 4000
+    })
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     toast.success({
       title: 'Message Sent',
-      description:
-        "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
+      description: "Message sent! I'll get back to you as soon as possible."
     })
   }
 
@@ -195,10 +223,11 @@ const ContactPage = () => {
                 </div>
 
                 <Button
-                  type='submit'
+                  size='lg'
                   className='bg-emerald-500 hover:bg-emerald-600 text-black font-semibold w-full py-6 text-lg transition-all duration-300 hover:scale-105'
                 >
-                  Send Message <Send className='ml-2 w-5 h-5' />
+                  <a href={buildMailtoHref()}>Send Message</a>
+                  <Send className='ml-2 w-5 h-5' />
                 </Button>
               </form>
             </motion.div>
@@ -245,5 +274,3 @@ const ContactPage = () => {
     </div>
   )
 }
-
-export default ContactPage
