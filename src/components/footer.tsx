@@ -47,11 +47,19 @@ const Footer = () => {
 
           <div>
             <span className='text-white font-semibold mb-4 block'>Programs</span>
-            <nav className='space-y-2'>
-              <p className='text-neutral-400'>Private Training</p>
-              <p className='text-neutral-400'>Small Groups</p>
-              <p className='text-neutral-400'>Workshops</p>
-              <p className='text-neutral-400'>Online Coaching</p>
+            <nav className='space-y-2 flex flex-col'>
+              <Link href='/programs' className='text-neutral-400'>
+                Private Training
+              </Link>
+              <Link href='/programs' className='text-neutral-400'>
+                Small Groups
+              </Link>
+              <Link href='/programs' className='text-neutral-400'>
+                Workshops
+              </Link>
+              <Link href='/programs' className='text-neutral-400'>
+                Online Coaching
+              </Link>
             </nav>
           </div>
 

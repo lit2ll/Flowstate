@@ -6,12 +6,15 @@ import { motion } from 'framer-motion'
 import { toast } from '@/lib/toast'
 
 const CtaBlock = () => {
+  // const handleCTA = () => {
+  //   toast.info({
+  //     title: "Let's Get Started",
+  //     description:
+  //       "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
+  //   })
+  // }
   const handleCTA = () => {
-    toast.info({
-      title: "Let's Get Started",
-      description:
-        "🚧 This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀"
-    })
+    window.location.href = '/schedule'
   }
   return (
     <section className='py-32 px-6 border-t border-white/5'>

@@ -21,9 +21,10 @@ function openExternal(url?: string, label?: string) {
 }
 
 export default function ProgramsPage() {
-  const stripeSingle = process.env.NEXT_PUBLIC_STRIPE_SINGLE
+  const stripeSingle = process.env.NEXT_PUBLIC_CALENDLY_SINGLE
   const stripe5 = process.env.NEXT_PUBLIC_STRIPE_5PACK
   const stripe10 = process.env.NEXT_PUBLIC_STRIPE_10PACK
+
   const calendlyPackage = process.env.NEXT_PUBLIC_CALENDLY_PACKAGE
   const calendlyGroup = process.env.NEXT_PUBLIC_CALENDLY_GROUP
   const calendlyWorkshop = process.env.NEXT_PUBLIC_CALENDLY_WORKSHOP

@@ -14,13 +14,13 @@ const AboutPage = () => {
     {
       icon: <Target className='w-8 h-8' />,
       title: 'Competition Background',
-      description:
-        'Active competitor with numerous wins in amateur and professional bouts'
+      description: 'Experienced competitor with multiple regional titles and accolades'
     },
     {
       icon: <Users className='w-8 h-8' />,
       title: '10+ Years Coaching',
-      description: 'Trained everyone from beginners to professional fighters'
+      description:
+        'Trained and trained with everyone from beginners to professional fighters'
     },
     {
       icon: <BookOpen className='w-8 h-8' />,
@@ -88,45 +88,6 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </section>
-
-        <section className='px-6 py-32 border-t border-white/5'>
-          <div className='container mx-auto max-w-6xl'>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className='space-y-16'
-            >
-              <div className='text-center'>
-                <h2 className='text-4xl md:text-5xl font-bold tracking-tight'>
-                  Background & Experience
-                </h2>
-              </div>
-              <div className='grid md:grid-cols-2 gap-8'>
-                {credentials.map((credential, index) => (
-                  <motion.div
-                    key={credential.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className='bg-white/5 border border-white/10 rounded-xl p-8 space-y-4 hover:bg-white/[0.07] hover:border-emerald-500/30 transition-all duration-300 group'
-                  >
-                    <div className='text-emerald-500 transition-transform duration-300 group-hover:scale-110'>
-                      {credential.icon}
-                    </div>
-                    <h3 className='text-2xl font-bold'>{credential.title}</h3>
-                    <p className='text-white/60 leading-relaxed'>
-                      {credential.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         <section className='px-6 py-32 border-t border-white/5 bg-white/2'>
           <div className='container mx-auto max-w-4xl'>
             <motion.div
@@ -179,16 +140,27 @@ const AboutPage = () => {
               </h2>
               <div className='space-y-6 text-lg text-white/70 leading-relaxed'>
                 <p>
-                  I started training martial arts over 23 years ago, drawn to the physical
-                  challenge and mental discipline it demanded. Like many people, I
-                  initially trained at traditional gyms where the focus was on toughness
-                  and volume—more rounds, harder sparring, faster pace.
+                  I’ve been drawn to martial arts for as long as I can remember. Long
+                  before I ever stepped into a gym, I was shadowboxing imaginary bad guys
+                  and and bullies from my schools. What drew me in wasn’t violence — it
+                  was the composure, confidence, and presence that skilled martial artists
+                  carried.
                 </p>
                 <p>
-                  After competing for several years and experiencing both wins and
-                  injuries, I began questioning the conventional approach. I studied
-                  biomechanics, motor learning, sports psychology, and trained with
-                  coaches who emphasized efficiency and longevity.
+                  I began formal training over two decades ago and went on to compete in
+                  martial arts tournaments, kickboxing events, and amateur Muay Thai
+                  bouts. Along the way, I experienced both the highs of winning and the
+                  reality of minor and major injuries. That contrast forced me to ask
+                  better questions. Not just how to fight, but how to train intelligently,
+                  improve without breaking down and develop skills that didn’t rely on
+                  being the fastest, biggest or the strongest.
+                </p>
+                <p>
+                  As a result, I began to question the conventional approach to training.
+                  I looked beyond brute force and focused on biomechanics, footwork,
+                  rhythm, fight strategy, fight IQ, and sports psychology, while training
+                  with coaches who emphasized growth, efficiency, control, precision and
+                  long-term development.
                 </p>
                 <p>
                   What I discovered was that the best fighters weren't necessarily the
@@ -197,10 +169,48 @@ const AboutPage = () => {
                   sustainably.
                 </p>
                 <p>
-                  Flow State Striking is the result of that journey—a training environment
-                  designed for people who want to develop real skill without sacrificing
-                  their health, their time, or their sanity in the process.
+                  Flow State Striking is the result of that journey. I aimed to create a
+                  training environment for people who want to develop real skill, calm
+                  confidence and long-term growth without sacrificing their health, their
+                  brains, their time, or their sanity in the process.
                 </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        <section className='px-6 py-32 border-t border-white/5'>
+          <div className='container mx-auto max-w-6xl'>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className='space-y-16'
+            >
+              <div className='text-center'>
+                <h2 className='text-4xl md:text-5xl font-bold tracking-tight'>
+                  Background & Experience
+                </h2>
+              </div>
+              <div className='grid md:grid-cols-2 gap-8'>
+                {credentials.map((credential, index) => (
+                  <motion.div
+                    key={credential.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className='bg-white/5 border border-white/10 rounded-xl p-8 space-y-4 hover:bg-white/[0.07] hover:border-emerald-500/30 transition-all duration-300 group'
+                  >
+                    <div className='text-emerald-500 transition-transform duration-300 group-hover:scale-110'>
+                      {credential.icon}
+                    </div>
+                    <h3 className='text-2xl font-bold'>{credential.title}</h3>
+                    <p className='text-white/60 leading-relaxed'>
+                      {credential.description}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
