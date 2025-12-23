@@ -34,9 +34,9 @@ export default function HeroVideo() {
 
       {/* Content */}
       <div className='mx-auto grid min-h-[90svh] max-w-5xl place-items-center px-6 py-20 text-center'>
-        <div className='w-full space-y-10'>
+        <div className='w-full space-y-12'>
           {/* Badge */}
-          <div className='flex justify-center'>
+          <div className='flex items-center justify-center'>
             <Badge text='New: Flow State Training Program' />
           </div>
 
@@ -46,22 +46,22 @@ export default function HeroVideo() {
               preset='fade-in-blur'
               speedSegment={0.3}
               as='h1'
-              className='mx-auto block max-w-4xl text-balance font-black tracking-tight text-5xl md:text-6xl xl:text-7xl'
+              className='mx-auto block max-w-4xl text-balance font-black tracking-tight text-4xl md:text-5xl xl:text-6xl'
             >
               Train Striking in a
             </TextEffect>
 
-            <div className='flex items-baseline justify-center gap-4'>
+            <div className='flex items-baseline justify-center gap-3'>
               <TextEffect
                 preset='fade-in-blur'
                 speedSegment={0.3}
                 as='span'
-                className='block text-balance font-black tracking-tight text-5xl md:text-6xl xl:text-[5.25rem]'
+                className='block text-balance font-black tracking-tight text-4xl md:text-6xl xl:text-[5.25rem]'
               >
                 State of
               </TextEffect>
 
-              <span className='block text-emerald-400 uppercase font-black tracking-tight text-6xl md:text-8xl leading-none'>
+              <span className='block text-emerald-400 uppercase font-black tracking-tight text-4xl md:text-8xl leading-none'>
                 Flow
               </span>
             </div>
@@ -74,7 +74,7 @@ export default function HeroVideo() {
             speedSegment={0.3}
             delay={0.5}
             as='p'
-            className='mx-auto max-w-2xl text-balance leading-relaxed text-zinc-200 text-base md:text-xl'
+            className='mx-auto max-w-2xl text-balance leading-relaxed text-zinc-200 text-md md:text-xl'
           >
             A modern Muay Thai & Boxing training system focused on balance, confidence,
             and real-world performance.
